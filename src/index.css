@@ -1,0 +1,131 @@
+/* =======================
+   Global / App Styles
+======================= */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #242424;      /* dark mode default */
+  color: rgba(255, 255, 255, 0.87);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =======================
+   Form / Input Styles
+======================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+input[type="text"],
+select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: #fff;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #646cff;
+  outline: none;
+}
+
+/* =======================
+   Button Styles
+======================= */
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #1a1a1a;
+  color: #fff;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+/* =======================
+   Task Display
+======================= */
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.task-item {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.25s;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* =======================
+   Light Mode
+======================= */
+@media (prefers-color-scheme: light) {
+  .App {
+    background-color: #ffffff;
+    color: #213547;
+  }
+
+  input[type="text"],
+  select,
+  button {
+    background-color: #f9f9f9;
+    color: #213547;
+    border: 1px solid #ccc;
+  }
+
+  button:hover {
+    border-color: #646cff;
+  }
+
+  p {
+    color: #555;
+  }
+}
